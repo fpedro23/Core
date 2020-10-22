@@ -10,16 +10,6 @@ import Foundation
 import UIKit
 import Combine
 
-class Publishers {
-    static var classPublisher: AnyPublisher<ClassSet, Error> {
-        URLSession.shared.dataTaskPublisher(for: URL(string: "https://core-class-search.herokuapp.com/classes")!)
-        .print("📶 Network 📶")
-        .map { $0.data }
-        .decode(type: ClassSet.self, decoder: JSONDecoder())
-        .eraseToAnyPublisher()
-    }
-}
-
 class ClassesViewController: UIViewController {
     
     var interactor: ClassesInteractor?

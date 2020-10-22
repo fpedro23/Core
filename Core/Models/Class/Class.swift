@@ -8,28 +8,6 @@
 
 import Foundation
 
-enum Modality: String, Codable {
-    case weights = "Weights"
-    case hiit = "HIIT"
-    case dance = "Dance"
-    case yoga = "Yoga"
-    case unknown
-    
-    public init(from decoder: Decoder) throws {
-        self = try Modality(rawValue: decoder.singleValueContainer().decode(String.self)) ?? .unknown
-    }
-}
-
-struct ClassSet: Codable {
-    var classes: [Class]
-    
-    func filteringClassesWithTitle(_ string: String) -> ClassSet {
-        var filtered = self
-        filtered.classes = filtered.classes.filteringClassesWithTitle(string)
-        return filtered
-    }
-}
-
 struct Class: Hashable {
     
     let id: Int
