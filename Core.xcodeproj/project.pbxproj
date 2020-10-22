@@ -21,6 +21,8 @@
 		89352739253F9D8D007B677B /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89352738253F9D8D007B677B /* CoreTests.swift */; };
 		89352744253F9E3B007B677B /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89352743253F9E3B007B677B /* ClassesViewController.swift */; };
 		898063C225408619001A68AB /* Class+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898063C125408619001A68AB /* Class+Fixtures.swift */; };
+		898063C62541F466001A68AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898063C52541F466001A68AB /* Colors.swift */; };
+		898063C82541F57E001A68AB /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898063C72541F57E001A68AB /* ClassView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		8935273A253F9D8D007B677B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89352743253F9E3B007B677B /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
 		898063C125408619001A68AB /* Class+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+Fixtures.swift"; sourceTree = "<group>"; };
+		898063C52541F466001A68AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		898063C72541F57E001A68AB /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 				89352721253F9D8C007B677B /* AppDelegate.swift */,
 				89352723253F9D8C007B677B /* SceneDelegate.swift */,
 				89352743253F9E3B007B677B /* ClassesViewController.swift */,
+				898063C52541F466001A68AB /* Colors.swift */,
 				892FC50C253FBCBE0092026B /* UIView+Extensions.swift */,
 				892FC50A253FBC700092026B /* ClassViewCell.swift */,
+				898063C72541F57E001A68AB /* ClassView.swift */,
 				892FC508253FAB090092026B /* ClassesViewState.swift */,
 				892FC504253FA1400092026B /* ClassesInteractor.swift */,
 				892FC506253FA1530092026B /* Class.swift */,
@@ -230,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				898063C225408619001A68AB /* Class+Fixtures.swift in Sources */,
+				898063C62541F466001A68AB /* Colors.swift in Sources */,
 				892FC509253FAB090092026B /* ClassesViewState.swift in Sources */,
 				892FC507253FA1530092026B /* Class.swift in Sources */,
 				89352722253F9D8C007B677B /* AppDelegate.swift in Sources */,
@@ -239,6 +246,7 @@
 				892FC505253FA1400092026B /* ClassesInteractor.swift in Sources */,
 				89352744253F9E3B007B677B /* ClassesViewController.swift in Sources */,
 				892FC50B253FBC700092026B /* ClassViewCell.swift in Sources */,
+				898063C82541F57E001A68AB /* ClassView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

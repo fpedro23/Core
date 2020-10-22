@@ -38,6 +38,8 @@ class ClassesViewController: UIViewController {
         let tableView = UITableView()
         tableView.register(ClassViewCell.self, forCellReuseIdentifier: ClassViewCell.reusableIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.backgroundColor = .background
+        tableView.separatorStyle = .none
         return tableView
     }()
 
@@ -51,26 +53,26 @@ class ClassesViewController: UIViewController {
     
     override func viewDidLoad() {
         title = "Workouts"
-        activityIndicatorView.backgroundColor = .white
+        activityIndicatorView.backgroundColor = .background
+        view.backgroundColor = .background
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.searchController = searchController
-        view.addConstrained(subview: tableView)
-        view.addConstrained(subview: activityIndicatorView)
+        addSafelyConstrained(subview: tableView)
+        addSafelyConstrained(subview: activityIndicatorView)
         subscription = interactor?.$viewState.receive(on: DispatchQueue.main).sink(receiveValue: updateViewState)
         interactor?.fetchAllClasses()
     }
     
     func cellProvider(tableView: UITableView, indexPath: IndexPath, class: Class) -> UITableViewCell? {
         let cell = tableView.dequeueReusableCell(withIdentifier: ClassViewCell.reusableIdentifier, for: indexPath) as? ClassViewCell
-        cell?.label.text = `class`.title
+        cell?.present(model: `class`)
         return cell
     }
     
     func updateViewState(state: ClassesViewState) {
         state.isLoading ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
         dataSource.apply(state.tableViewState)
-    }
-    
+    }    
 }
 
 extension ClassesViewController: UISearchResultsUpdating {
