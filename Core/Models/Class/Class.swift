@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Instructor = String
+
 struct Class: Hashable {
     
     let id: Int
@@ -16,7 +18,7 @@ struct Class: Hashable {
     
     let description: String
     
-    let instructor: String
+    let instructor: Instructor
     
     let title: String
     

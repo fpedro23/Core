@@ -1,0 +1,107 @@
+{
+  "classes": [
+    {
+      "id": 0,
+      "modality": "Weights",
+      "description": "Get stronger using this workout! The instructor will guide you through arms and legs movements. Light and medium weights are required.",
+      "instructor": "Jacob Doe",
+      "title": "Exciting Weights Class",
+      "time": 30
+    },
+    {
+      "id": 2,
+      "modality": "HIIT",
+      "description": "You'll get your heart beating and build strength in this fast-paced workout using only bands and bodyweight.",
+      "instructor": "Emma Doe",
+      "title": "Energetic HIIT Class",
+      "time": 45
+    },
+    {
+      "id": 4,
+      "modality": "Dance",
+      "description": "Put on your dancing shoes!",
+      "instructor": "Ethan Doe",
+      "title": "Modern Dance Class",
+      "time": 25
+    },
+    {
+      "id": 5,
+      "modality": "Yoga",
+      "description": "Gain strength and flexibility with this 90s-themed yoga class.",
+      "instructor": "Isabella Doe",
+      "title": "90s Yoga Class",
+      "time": 55
+    },
+    {
+      "id": 6,
+      "modality": "Yoga",
+      "description": "Gain flexibility, strength, and relaxation with this yoga class. Soft music is playing in the background. Practice on your mat and then bring your practice into the world.",
+      "instructor": "Isabella",
+      "title": "90s Yoga Class",
+      "time": 20
+    },
+    {
+      "id": 7,
+      "modality": "Weights",
+      "description": "Get stronger using this workout! The instructor will guide you through arms and legs movements. Light and medium weights are required.",
+      "instructor": "Jacob",
+      "title": "Exciting Weights Class",
+      "time": 30
+    },
+    {
+      "id": 8,
+      "modality": "Yoga",
+      "description": "Gain flexibility, strength, and relaxation with this yoga class. Soft music is playing in the background. Practice on your mat and then bring your practice into the world.",
+      "instructor": "Ethan",
+      "title": "90s Yoga Class",
+      "time": 20
+    },
+    {
+      "id": 9,
+      "modality": "Weights",
+      "description": "Get stronger using this workout! The instructor will guide you through arms and legs movements. Light and medium weights are required.",
+      "instructor": "Noah",
+      "title": "90s Weights Class",
+      "time": 100
+    },
+    {
+      "id": 10,
+      "modality": "HIIT",
+      "description": "In high intensity interval training, you'll get your heart beating and build strength in this fast-paced workout using only bodyweight.",
+      "instructor": "Ethan",
+      "title": "Power HIIT Class",
+      "time": 20
+    },
+    {
+      "id": 11,
+      "modality": "Yoga",
+      "description": "Gain flexibility, strength, and relaxation with this yoga class. Soft music is playing in the background. Practice on your mat and then bring your practice into the world.",
+      "instructor": "Noah",
+      "title": "Relaxing, Spiritual Yoga Class",
+      "time": 30
+    },
+    {
+      "id": 12,
+      "modality": "Weights",
+      "description": "Get stronger using this workout! The instructor will guide you through arms and legs movements. Light and medium weights are required.",
+      "instructor": "Ethan",
+      "title": "Exciting 80s Pop Weights Class",
+      "time": 30
+    },
+    {
+      "id": 13,
+      "modality": "Dance",
+      "instructor": "Sophia",
+      "title": "90s Dance Class",
+      "time": 10
+    },
+    {
+      "id": 14,
+      "modality": "Yoga",
+      "description": "Gain flexibility, strength, and relaxation with this yoga class. Soft music is playing in the background. Practice on your mat and then bring your practice into the world.",
+      "instructor": "Jacob",
+      "title": "Exciting Yoga Class",
+      "time": 10
+    }
+  ]
+}

@@ -11,10 +11,22 @@ import Combine
 
 class Services {
     static var classListService: AnyPublisher<ClassSet, Error> {
-        URLSession.shared.dataTaskPublisher(for: URL(string: "https://core-class-search.herokuapp.com/classes")!)
+        URLSession.shared.dataTaskPublisher(for: API.baseURL.appendingPathComponent(API.classesEndpoint))
         .print("📶 Network 📶")
         .map { $0.data }
         .decode(type: ClassSet.self, decoder: JSONDecoder())
         .eraseToAnyPublisher()
     }
+}
+
+
+enum API {
+    static var baseURL: URL {
+        try! URL(string: "https://" + Configuration.value(for: "API_BASE_URL"))!
+    }
+    
+    static var classesEndpoint: String {
+        "classes"
+    }
+    
 }

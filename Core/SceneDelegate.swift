@@ -12,13 +12,25 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    private var isRunningTests: Bool {
+        NSClassFromString("XCTest") != nil
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
+            
             let window = UIWindow(windowScene: windowScene)
+            
+            if isRunningTests {
+                window.rootViewController = UIViewController()
+                self.window = window
+                window.makeKeyAndVisible()
+                return
+            }
+            
             let controller = ClassesViewController()
-            controller.interactor = ClassesInteractor(publisher: Services.classListService)
+            controller.interactor = ClassesPresenter(service: Services.classListService)
             let navigationController = UINavigationController(rootViewController: controller)
             window.rootViewController = navigationController
             self.window = window

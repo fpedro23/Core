@@ -1,5 +1,5 @@
 //
-//  ClassesInteractor.swift
+//  ClassesPresenter.swift
 //  Core
 //
 //  Created by Pedro Contreras on 20/10/20.
@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-class ClassesInteractor {
+class ClassesPresenter {
     
     @Published
     private(set) var viewState = ClassesViewState()
@@ -18,30 +18,32 @@ class ClassesInteractor {
     
     private var latestClassFetch = CurrentValueSubject<ClassSet, Never>(ClassSet(classes: []))
     
-    private var publisher: AnyPublisher<ClassSet, Error>
+    private var service: AnyPublisher<ClassSet, Error>
     
     private var subscriptions: Set<AnyCancellable> = []
 
-    init(publisher: AnyPublisher<ClassSet, Error>) {
-        self.publisher = publisher
+    init(service: AnyPublisher<ClassSet, Error>) {
+        self.service = service
         initializeFilterPublisher()
     }
     
     func initializeFilterPublisher() {
         latestClassFetch.combineLatest(filterText)
-            .handleEvents(receiveOutput: { self.viewState.isLoading = !$1.isEmpty })
-            .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
+            .handleEvents(receiveOutput: { [weak self] in self?.viewState.isLoading = !$1.isEmpty })
+            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.global())
             .map { $0.filteringClassesWithTitle($1) }
-            .sink(receiveValue: updateViewState)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] in  self?.updateViewState(model: $0)})
             .store(in: &subscriptions)
     }
     
     func fetchAllClasses() {
         viewState.isLoading = true
-        publisher
-            .handleEvents(receiveOutput: { self.latestClassFetch.value = $0 })
+        service
+            .handleEvents(receiveOutput: { [weak self] in self?.latestClassFetch.value = $0 })
             .replaceError(with: ClassSet(classes: [.error]))
-            .sink(receiveValue: updateViewState)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] in  self?.updateViewState(model: $0)})
             .store(in: &subscriptions)
     }
     
@@ -49,5 +51,9 @@ class ClassesInteractor {
     private func updateViewState(model: ClassSet) {
         self.viewState.classes = model.classes
         self.viewState.isLoading = false
+    }
+    
+    deinit {
+        print("Deiniteeded")
     }
 }

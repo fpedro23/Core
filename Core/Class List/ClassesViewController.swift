@@ -12,7 +12,7 @@ import Combine
 
 class ClassesViewController: UIViewController {
     
-    var interactor: ClassesInteractor?
+    var interactor: ClassesPresenter?
     
     private var subscription: AnyCancellable?
     
@@ -42,7 +42,7 @@ class ClassesViewController: UIViewController {
     lazy var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
-        title = "Workouts"
+        title = "Classes"
         activityIndicatorView.backgroundColor = .background
         view.backgroundColor = .background
         navigationController?.navigationBar.prefersLargeTitles = true
