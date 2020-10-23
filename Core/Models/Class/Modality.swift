@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// The style of a class. 
 enum Modality: String, Codable {
     case weights = "Weights"
     case hiit = "HIIT"

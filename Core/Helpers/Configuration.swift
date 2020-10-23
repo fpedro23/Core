@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+/// This class will read from the Info.plist file.
 enum Configuration {
     enum Error: Swift.Error {
         case missingKey, invalidValue

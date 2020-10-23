@@ -10,19 +10,25 @@ import Foundation
 
 typealias Instructor = String
 
+/// A struct containing the information of a `Class`.
 struct Class: Hashable {
     
+    /// The class id.
     let id: Int
     
+    /// The modality of the class.
     let modality: Modality
     
+    /// The description for the class.
     let description: String
     
+    /// The instructor of the class.
     let instructor: Instructor
     
+    /// The title of the class.
     let title: String
-    
-    // In minutes
+        
+    /// Duration of the class in minutes.
     let time: Int
 }
 
@@ -45,6 +51,10 @@ extension Class: Codable {
 }
 
 extension Array where Iterator.Element == Class {
+    
+    /// Will filter all the classes that contain the given string in the `title` property.
+    /// - Parameter string: The string to match the title with.
+    /// - Returns: A filtered array of classes.
     func filteringClassesWithTitle(_ string: String) -> [Class] {
         guard !string.isEmpty else { return self }
         return filter { $0.title.lowercased().contains(string.lowercased())}

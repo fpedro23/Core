@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		892FC505253FA1400092026B /* ClassesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FC504253FA1400092026B /* ClassesInteractor.swift */; };
+		892FC505253FA1400092026B /* ClassesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FC504253FA1400092026B /* ClassesPresenter.swift */; };
 		892FC507253FA1530092026B /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FC506253FA1530092026B /* Class.swift */; };
 		892FC509253FAB090092026B /* ClassesViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FC508253FAB090092026B /* ClassesViewState.swift */; };
 		892FC50B253FBC700092026B /* ClassViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FC50A253FBC700092026B /* ClassViewCell.swift */; };
@@ -30,6 +30,7 @@
 		898063E22542672E001A68AB /* ClassesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898063E12542672E001A68AB /* ClassesViewControllerTests.swift */; };
 		898063E4254267AB001A68AB /* Class+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898063E3254267AB001A68AB /* Class+Fixtures.swift */; };
 		898063E825426C6F001A68AB /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898063E725426C6F001A68AB /* Configuration.swift */; };
+		898063EA25426D83001A68AB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898063E925426D83001A68AB /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		892FC504253FA1400092026B /* ClassesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesInteractor.swift; sourceTree = "<group>"; };
+		892FC504253FA1400092026B /* ClassesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesPresenter.swift; sourceTree = "<group>"; };
 		892FC506253FA1530092026B /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		892FC508253FAB090092026B /* ClassesViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewState.swift; sourceTree = "<group>"; };
 		892FC50A253FBC700092026B /* ClassViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewCell.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		898063E3254267AB001A68AB /* Class+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+Fixtures.swift"; sourceTree = "<group>"; };
 		898063E525426A12001A68AB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		898063E725426C6F001A68AB /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		898063E925426D83001A68AB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				898063D125420876001A68AB /* Services.swift */,
+				898063E925426D83001A68AB /* API.swift */,
 				898063E625426C62001A68AB /* Helpers */,
 				898063CF254206BA001A68AB /* Models */,
 				898063CA2542064E001A68AB /* Class List */,
@@ -162,8 +165,8 @@
 				89352743253F9E3B007B677B /* ClassesViewController.swift */,
 				892FC50A253FBC700092026B /* ClassViewCell.swift */,
 				892FC508253FAB090092026B /* ClassesViewState.swift */,
-				892FC504253FA1400092026B /* ClassesInteractor.swift */,
 				898063C72541F57E001A68AB /* ClassView.swift */,
+				892FC504253FA1400092026B /* ClassesPresenter.swift */,
 			);
 			path = "Class List";
 			sourceTree = "<group>";
@@ -326,9 +329,10 @@
 				89352724253F9D8C007B677B /* SceneDelegate.swift in Sources */,
 				898063CE2542069F001A68AB /* ClassSet.swift in Sources */,
 				898063CC25420674001A68AB /* Modality.swift in Sources */,
-				892FC505253FA1400092026B /* ClassesInteractor.swift in Sources */,
+				892FC505253FA1400092026B /* ClassesPresenter.swift in Sources */,
 				89352744253F9E3B007B677B /* ClassesViewController.swift in Sources */,
 				892FC50B253FBC700092026B /* ClassViewCell.swift in Sources */,
+				898063EA25426D83001A68AB /* API.swift in Sources */,
 				898063C82541F57E001A68AB /* ClassView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

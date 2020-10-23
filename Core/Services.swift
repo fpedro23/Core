@@ -9,7 +9,10 @@
 import Foundation
 import Combine
 
+/// Class containing the publishers for the app's endpoints.
 class Services {
+    
+    /// A pusblisher that will query a list of Classes
     static var classListService: AnyPublisher<ClassSet, Error> {
         URLSession.shared.dataTaskPublisher(for: API.baseURL.appendingPathComponent(API.classesEndpoint))
         .print("📶 Network 📶")
@@ -20,13 +23,3 @@ class Services {
 }
 
 
-enum API {
-    static var baseURL: URL {
-        try! URL(string: "https://" + Configuration.value(for: "API_BASE_URL"))!
-    }
-    
-    static var classesEndpoint: String {
-        "classes"
-    }
-    
-}

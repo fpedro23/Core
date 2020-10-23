@@ -25,6 +25,7 @@ extension UIColor {
     static var weights: UIColor {
         UIColor(named: "weights")!
     }
+    
     static var dance: UIColor {
         UIColor(named: "dance")!
     }

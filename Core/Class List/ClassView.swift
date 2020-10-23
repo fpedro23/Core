@@ -79,11 +79,12 @@ class ClassView: UIView {
 }
 
 private extension Class {
+    static let formatter =  DateComponentsFormatter()
     var formattedTime: String {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.minute]
+        let formatter = Class.formatter
+        formatter.allowedUnits = [.hour, .minute]
         formatter.unitsStyle = .abbreviated
-        return formatter.string(from: TimeInterval(time * 60))!
+        return formatter.string(from: TimeInterval(time * 60)) ?? ""
     }
 }
 
