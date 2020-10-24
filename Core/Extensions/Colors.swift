@@ -11,22 +11,22 @@ import UIKit
 extension UIColor {
     
     static var background: UIColor {
-        UIColor(named: "background")!
+        UIColor(named: "background") ?? .black
     }
     
     static var yoga: UIColor {
-        UIColor(named: "yoga")!
+        UIColor(named: "yoga") ?? .black
     }
     
     static var hiit: UIColor {
-        UIColor(named: "hiit")!
+        UIColor(named: "hiit") ?? .black
     }
     
     static var weights: UIColor {
-        UIColor(named: "weights")!
+        UIColor(named: "weight") ?? .black
     }
     
     static var dance: UIColor {
-        UIColor(named: "dance")!
+        UIColor(named: "dance") ?? .black
     }
 }
